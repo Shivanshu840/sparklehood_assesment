@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Incident" ALTER COLUMN "reported_at" SET DEFAULT CURRENT_TIMESTAMP;

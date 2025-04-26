@@ -1,0 +1,1 @@
+{"root":["./src/db.ts","./src/index.ts","./src/interface.ts","./src/seed.ts","./src/controller/incident.controller.ts","./src/middleware/validation.ts","./src/routes/incident.route.ts"],"version":"5.8.3"}

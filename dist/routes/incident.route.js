@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.incidentRouter = void 0;
+const express_1 = require("express");
+const incident_controller_1 = require("../controller/incident.controller");
+const validation_1 = require("../middleware/validation");
+exports.incidentRouter = (0, express_1.Router)();
+exports.incidentRouter.post("/add", validation_1.Check, incident_controller_1.Add_Incident);
+exports.incidentRouter.get("/", incident_controller_1.Get_Incident);
+exports.incidentRouter.get("/:id", incident_controller_1.Get_Incident_ById);
+exports.incidentRouter.delete("/:id", incident_controller_1.Delete_Incident);

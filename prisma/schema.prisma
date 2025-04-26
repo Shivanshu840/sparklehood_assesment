@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../dist/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+enum severity_type{
+  Low
+  Medium
+  High
+}
+
+model Incident {
+  id            String  @id @default(uuid())
+  title         String
+  description   String
+  severity      severity_type
+  reported_at   DateTime  @default(now())
+}
